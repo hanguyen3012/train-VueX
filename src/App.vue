@@ -1,17 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app"><NavbarItem /><TodoItem /></div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TodoItem from "./components/TodoItem.vue";
+import NavbarItem from "./components/NavbarItem.vue";
+// import store from "./store/index";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { TodoItem, NavbarItem },
+};
 </script>
 
 <style>
@@ -19,8 +17,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: rgb(219, 219, 219);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
 }
 </style>
